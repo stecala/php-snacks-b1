@@ -50,11 +50,8 @@
     
             <li style="padding-top: 10px">
                 <?php
-                    $somma = 0;
-                    for($k = 0 ; $k < count($classe67[$i]['voti']) ; $k++){
-                        $somma = $somma +$classe67[$i]['voti'][$k];
-                    }
-                    $media = $somma / 5;
+
+                    $media = array_sum($classe67[$i]['voti']) / count($classe67[$i]['voti']);
 
                     echo 'Nome: '.$classe67[$i]['nome'].'<br>Cognome: '.$classe67[$i]['cognome'].'<br>Media: '.$media;
                 ?>
